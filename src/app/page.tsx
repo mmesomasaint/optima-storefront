@@ -61,7 +61,7 @@ export default function Home() {
             {/* Action Button */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
-                href=`${process.env.NEXT_PUBLIC_PAYSTACK_PAYPAGE_URL}` 
+                href={`${process.env.NEXT_PUBLIC_PAYSTACK_PAYPAGE_URL}`} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-black bg-white rounded-full overflow-hidden transition-transform hover:scale-[1.02] active:scale-[0.98]"
@@ -387,7 +387,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link 
-                href=`${process.env.NEXT_PUBLIC_PAYSTACK_PAYPAGE_URL}`
+                href={`${process.env.NEXT_PUBLIC_PAYSTACK_PAYPAGE_URL}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 text-sm font-semibold text-center text-black bg-white rounded-xl hover:bg-zinc-200 transition-colors mt-auto block"

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optima Logic",
+  title: "Optima Logic Studio",
   description: "A venture studio for automating every bottle-neck process whatsoever.",
 };
 
