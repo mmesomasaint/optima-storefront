@@ -3,14 +3,13 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Terminal, Database, Sparkles, Layers, Workflow, Clock, Zap, ClipboardPenLine, Cpu, CheckCircle2, Check, HelpCircle, MessageSquareQuote, Star } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    // FIX 1: Removed overflow-hidden to restore natural scrolling.
-    // Removed bg-black to let globals.css handle the true base layer smoothly.
     <div className="relative min-h-screen text-white selection:bg-zinc-800 selection:text-white flex flex-col">
       
-      {/* FIX 2: Background elements are now 'fixed' instead of 'absolute'. 
+      {/* Background elements are now 'fixed' instead of 'absolute'. 
           This ensures the grid and glow stay planted behind the content infinitely as you scroll. */}
       <div className="fixed inset-0 z-[-1] pointer-events-none bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       <div className="fixed top-[-20%] left-1/2 w-[800px] h-[400px] -translate-x-1/2 rounded-[100%] bg-zinc-500/10 blur-[120px] pointer-events-none z-[-1]" />
@@ -18,8 +17,14 @@ export default function Home() {
       {/* Floating Glassmorphism Navigation */}
       <nav className="fixed top-0 w-full z-50 flex justify-center pt-6 px-6 pointer-events-none">
         <div className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-6 py-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
-          <div className="flex items-center gap-2">
-            <div className="w-5 h-5 bg-white rounded-sm" />
+          <div className="flex items-center gap-2">{/* The New Logo Injection */}
+            <Image 
+              src="/favicon.ico" 
+              alt="Optima Logic" 
+              width={20} 
+              height={20} 
+              className="w-5 h-5" 
+            />
             <span className="text-sm font-semibold tracking-tight text-white">Optima Logic.</span>
           </div>
           <Link
