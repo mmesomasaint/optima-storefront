@@ -28,7 +28,7 @@ export default function Home() {
             <span className="text-sm font-semibold tracking-tight text-white">Optima Logic.</span>
           </div>
           <Link
-            href="https://portal.optimalogic.studio"
+            href="https://portal.optimalogic.studio/login"
             className="text-xs font-medium text-zinc-400 hover:text-white transition-colors"
           >
             Client Login
@@ -65,17 +65,15 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Action Button */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
+              <a 
                 href={`${process.env.NEXT_PUBLIC_PAYSTACK_PAYPAGE_URL}`} 
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group relative flex items-center gap-2 px-6 py-3.5 text-sm font-medium text-black bg-white rounded-full overflow-hidden transition-transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Initiate Architecture — $250 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-zinc-200 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>
